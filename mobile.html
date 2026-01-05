@@ -266,7 +266,7 @@
   <script src="js/utils.js"></script>
   <script src="js/mobile.js"></script>
 
-  <!-- Tab Navigation & Viewport Switch -->
+  <!-- Tab Navigation -->
   <script>
     (function() {
       // Tab-based page navigation
@@ -308,21 +308,6 @@
           switchPage(heroCta.dataset.nav);
         });
       }
-
-      // Viewport switch detection
-      let resizeTimer;
-      const DESKTOP_BREAKPOINT = 768;
-
-      function checkViewport() {
-        if (window.innerWidth >= DESKTOP_BREAKPOINT) {
-          window.location.replace('desktop.html' + window.location.search);
-        }
-      }
-
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(checkViewport, 250);
-      });
     })();
   </script>
 </body>
