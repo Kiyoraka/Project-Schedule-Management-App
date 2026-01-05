@@ -32,7 +32,7 @@
       <span class="header-logo-text">Schedule Booking</span>
     </div>
     <nav class="header-nav">
-      <a href="#top" class="header-nav-link active">Home</a>
+      <a href="#home" class="header-nav-link active">Home</a>
       <a href="#timetable" class="header-nav-link">Schedule</a>
       <a href="#about" class="header-nav-link">About</a>
       <a href="#contact" class="header-nav-link">Contact</a>
@@ -43,12 +43,14 @@
   <!-- ========================================
        MAIN CONTENT
        ======================================== -->
-  <main class="main-content" id="top">
-    <!-- Hero Section -->
+  <main class="main-content">
+    <!-- Home / Welcome Section -->
     <div class="container">
-      <section class="hero">
-        <h1 class="hero-title">Book Your Time Slot</h1>
-        <p class="hero-subtitle">Select an available slot from the schedule below to make a booking</p>
+      <section id="home" class="hero">
+        <div class="hero-badge">Driving School</div>
+        <h1 class="hero-title">Book Your Driving Lesson Today</h1>
+        <p class="hero-subtitle">Start your journey to becoming a confident driver. Choose your preferred time slot and learn with our experienced instructors.</p>
+        <a href="#timetable" class="btn btn-primary hero-cta">View Available Slots</a>
       </section>
     </div>
 
@@ -91,18 +93,18 @@
     <div class="container">
       <section id="about" class="section">
         <div class="section-header">
-          <h2 class="section-title">About Our Service</h2>
-          <p class="section-subtitle">Simple and efficient booking management</p>
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">Your trusted partner in learning to drive</p>
         </div>
         <div class="about-content">
           <div class="about-card">
             <div class="about-card-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
               </svg>
             </div>
-            <h3 class="about-card-title">Easy Scheduling</h3>
-            <p class="about-card-text">Book your preferred time slot with just a few clicks. Our intuitive interface makes scheduling simple.</p>
+            <h3 class="about-card-title">Expert Instructors</h3>
+            <p class="about-card-text">Learn from certified and experienced driving instructors who prioritize your safety and confidence.</p>
           </div>
           <div class="about-card">
             <div class="about-card-icon">
@@ -110,17 +112,17 @@
                 <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
-            <h3 class="about-card-title">Real-time Updates</h3>
-            <p class="about-card-text">See availability instantly. Slots update in real-time as bookings are made and confirmed.</p>
+            <h3 class="about-card-title">Flexible Schedule</h3>
+            <p class="about-card-text">Choose from morning to evening slots, 7 days a week. Book lessons that fit your busy lifestyle.</p>
           </div>
           <div class="about-card">
             <div class="about-card-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
               </svg>
             </div>
-            <h3 class="about-card-title">Quick Confirmation</h3>
-            <p class="about-card-text">Receive confirmation once your booking is approved by our admin team.</p>
+            <h3 class="about-card-title">Safe Learning</h3>
+            <p class="about-card-text">Modern dual-control vehicles and comprehensive insurance ensure a safe learning environment.</p>
           </div>
         </div>
       </section>
@@ -129,7 +131,7 @@
       <section id="contact" class="section">
         <div class="section-header">
           <h2 class="section-title">Contact Us</h2>
-          <p class="section-subtitle">Get in touch if you have any questions</p>
+          <p class="section-subtitle">Have questions? We're here to help</p>
         </div>
         <div class="contact-content">
           <div class="contact-info">
@@ -137,7 +139,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              <span>contact@example.com</span>
+              <span>info@drivingschool.com</span>
             </div>
             <div class="contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -152,6 +154,12 @@
               </svg>
               <span>Kuala Lumpur, Malaysia</span>
             </div>
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>Open Daily: 8:00 AM - 8:00 PM</span>
+            </div>
           </div>
         </div>
       </section>
@@ -160,7 +168,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2026 Schedule Booking. All rights reserved.</p>
+        <p>&copy; 2026 Schedule Booking - Driving School. All rights reserved.</p>
       </div>
     </footer>
   </main>
@@ -171,7 +179,7 @@
   <div class="modal-overlay" id="booking-modal">
     <div class="modal">
       <div class="modal-header">
-        <h2 class="modal-title">Book This Slot</h2>
+        <h2 class="modal-title">Book Driving Lesson</h2>
         <button class="modal-close" id="modal-close" aria-label="Close modal">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 18L18 6M6 6l12 12"/>
@@ -213,7 +221,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
-        <button type="submit" class="btn btn-primary" id="modal-submit">Book Now</button>
+        <button type="submit" class="btn btn-primary" id="modal-submit">Book Lesson</button>
       </div>
     </div>
   </div>
