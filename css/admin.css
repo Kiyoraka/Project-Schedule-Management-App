@@ -1,0 +1,522 @@
+/**
+ * Admin CSS - Dashboard Styles
+ * Schedule Management App
+ */
+
+/* ========================================
+   LOGIN PAGE
+   ======================================== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-50);
+  padding: var(--spacing-4);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-8);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.login-logo-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  margin: 0 auto var(--spacing-4);
+}
+
+.login-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.login-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.login-form {
+  margin-bottom: var(--spacing-6);
+}
+
+.login-error {
+  display: none;
+  padding: var(--spacing-3);
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+.login-error.visible {
+  display: block;
+}
+
+.login-btn {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--font-size-base);
+}
+
+.login-hint {
+  text-align: center;
+  padding: var(--spacing-4);
+  background-color: var(--gray-50);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.login-hint p {
+  margin-bottom: var(--spacing-1);
+}
+
+.login-hint p:last-child {
+  margin-bottom: 0;
+}
+
+.login-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  transition: color var(--transition-fast);
+}
+
+.login-back:hover {
+  color: var(--primary);
+}
+
+/* ========================================
+   ADMIN PAGE LAYOUT
+   ======================================== */
+.admin-page {
+  background-color: var(--gray-50);
+  min-height: 100vh;
+}
+
+/* Desktop: Main content with sidebar offset */
+@media (min-width: 768px) {
+  .admin-main {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+  }
+}
+
+/* Mobile: Account for bottom nav and header */
+@media (max-width: 767px) {
+  .admin-main {
+    padding-top: var(--header-height);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-4));
+  }
+}
+
+.admin-content {
+  padding: var(--spacing-6);
+  max-width: 1200px;
+}
+
+@media (max-width: 767px) {
+  .admin-content {
+    padding: var(--spacing-4);
+  }
+}
+
+/* ========================================
+   ADMIN MOBILE HEADER
+   ======================================== */
+.admin-header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-4);
+  z-index: var(--z-dropdown);
+}
+
+.admin-header-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+}
+
+.header-back {
+  position: absolute;
+  left: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--gray-600);
+}
+
+/* ========================================
+   PAGE HEADER
+   ======================================== */
+.page-header {
+  margin-bottom: var(--spacing-6);
+}
+
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    margin-bottom: var(--spacing-4);
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* ========================================
+   STATS GRID
+   ======================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4);
+}
+
+.stat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-1);
+}
+
+.stat-card-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+}
+
+.stat-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-primary-light { background-color: var(--primary-light); }
+.bg-success-light { background-color: var(--success-light); }
+.bg-warning-light { background-color: var(--warning-light); }
+.bg-danger-light { background-color: var(--danger-light); }
+.bg-gray-light { background-color: var(--gray-100); }
+
+@media (max-width: 767px) {
+  .stat-card {
+    padding: var(--spacing-3);
+  }
+
+  .stat-card-value {
+    font-size: var(--font-size-xl);
+  }
+
+  .stat-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stat-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ========================================
+   QUICK ACTIONS
+   ======================================== */
+.section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.action-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.action-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.action-card-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.action-card-content {
+  flex: 1;
+}
+
+.action-card-title {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-1);
+}
+
+.action-card-desc {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.action-card-arrow {
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   FILTER TABS
+   ======================================== */
+.tabs {
+  margin-bottom: var(--spacing-4);
+}
+
+/* ========================================
+   BOOKINGS TABLE (Desktop)
+   ======================================== */
+.bookings-table-wrapper {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.bookings-table {
+  width: 100%;
+}
+
+.bookings-table th {
+  background-color: var(--gray-50);
+  font-weight: var(--font-semibold);
+}
+
+.bookings-table td {
+  vertical-align: middle;
+}
+
+.table-actions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.table-actions .btn {
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+/* ========================================
+   BOOKING CARDS (Mobile)
+   ======================================== */
+.bookings-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.booking-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+}
+
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-3);
+}
+
+.booking-card-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+}
+
+.booking-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.booking-card-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.booking-card-row svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.booking-card-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  padding-top: var(--spacing-3);
+  border-top: 1px solid var(--gray-100);
+}
+
+.booking-card-actions .btn {
+  flex: 1;
+}
+
+/* ========================================
+   BOOKING DETAIL MODAL
+   ======================================== */
+.booking-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.booking-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.booking-detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.booking-detail-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.booking-detail-value {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  color: var(--gray-900);
+}
+
+/* ========================================
+   EMPTY STATE
+   ======================================== */
+.empty-state {
+  padding: var(--spacing-12) var(--spacing-4);
+}
+
+/* ========================================
+   LOGOUT BUTTON STYLING
+   ======================================== */
+.logout-btn {
+  color: var(--danger);
+}
+
+.logout-btn:hover {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+/* ========================================
+   RESPONSIVE SIDEBAR ADJUSTMENTS
+   ======================================== */
+@media (min-width: 768px) {
+  .sidebar {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
