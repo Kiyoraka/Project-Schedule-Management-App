@@ -1,0 +1,527 @@
+/**
+ * Admin Mobile CSS - Mobile Admin Panel Styles (App-like)
+ * Schedule Management App
+ */
+
+/* ========================================
+   ADMIN PAGE LAYOUT (Mobile)
+   ======================================== */
+.admin-page {
+  min-height: 100vh;
+  background-color: var(--gray-50);
+  padding-bottom: var(--bottom-nav-height);
+}
+
+/* ========================================
+   MOBILE HEADER
+   ======================================== */
+.mobile-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  z-index: var(--z-dropdown);
+}
+
+.mobile-header-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+}
+
+.header-back {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.header-back:active {
+  background-color: var(--gray-100);
+}
+
+/* ========================================
+   MOBILE MAIN CONTENT
+   ======================================== */
+.mobile-main {
+  padding: var(--spacing-4);
+}
+
+/* ========================================
+   STATS GRID (Mobile)
+   ======================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.stat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-1);
+}
+
+.stat-card-value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+}
+
+.stat-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-warning-light {
+  background-color: var(--warning-light);
+}
+
+.bg-success-light {
+  background-color: var(--success-light);
+}
+
+.bg-gray-light {
+  background-color: var(--gray-100);
+}
+
+/* ========================================
+   QUICK ACTIONS (Mobile)
+   ======================================== */
+.quick-actions {
+  margin-top: var(--spacing-6);
+}
+
+.section-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.action-card:active {
+  background-color: var(--gray-50);
+}
+
+.action-card-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.action-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.action-card-title {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: 2px;
+}
+
+.action-card-desc {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+.action-card-arrow {
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   BOOKING CARDS (Mobile)
+   ======================================== */
+.bookings-cards {
+  margin-top: var(--spacing-4);
+}
+
+.booking-card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+}
+
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-3);
+}
+
+.booking-card-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+}
+
+.booking-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.booking-card-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.booking-card-row svg {
+  width: 16px;
+  height: 16px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+}
+
+.booking-card-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  padding-top: var(--spacing-3);
+  border-top: 1px solid var(--gray-100);
+}
+
+.booking-card-actions .btn {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   LOGIN PAGE (Mobile)
+   ======================================== */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-50);
+  padding: var(--spacing-4);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-6);
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.login-logo-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  margin: 0 auto var(--spacing-4);
+}
+
+.login-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.login-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.login-form {
+  margin-bottom: var(--spacing-4);
+}
+
+.login-error {
+  padding: var(--spacing-3);
+  background-color: var(--danger-light);
+  color: #991B1B;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+  display: none;
+}
+
+.login-error.visible {
+  display: block;
+}
+
+.login-btn {
+  width: 100%;
+  padding: var(--spacing-3);
+  font-size: var(--font-size-base);
+}
+
+.login-hint {
+  text-align: center;
+  padding: var(--spacing-3);
+  background-color: var(--gray-50);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+}
+
+.login-hint p {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.login-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  padding: var(--spacing-2);
+  transition: color var(--transition-fast);
+}
+
+.login-back:active {
+  color: var(--primary);
+}
+
+/* ========================================
+   BOOKING DETAIL (Modal - Mobile)
+   ======================================== */
+.mobile-modal {
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+}
+
+.booking-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.booking-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.booking-detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.booking-detail-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.booking-detail-value {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  color: var(--gray-900);
+  text-align: right;
+}
+
+/* ========================================
+   BOTTOM NAVIGATION (Mobile Admin)
+   ======================================== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottom-nav-height);
+  background-color: var(--white);
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  z-index: var(--z-dropdown);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.bottom-nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: var(--spacing-2);
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  border: none;
+  background: none;
+}
+
+.bottom-nav-item:active,
+.bottom-nav-item.active {
+  color: var(--primary);
+}
+
+.bottom-nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-nav-item span {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-medium);
+}
+
+/* ========================================
+   FILTER TABS (Mobile)
+   ======================================== */
+.tabs {
+  display: flex;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1);
+  background-color: var(--gray-100);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  color: var(--gray-600);
+  background-color: transparent;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.tab:active {
+  background-color: var(--gray-200);
+}
+
+.tab.active {
+  background-color: var(--white);
+  color: var(--gray-900);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   EMPTY STATE (Mobile)
+   ======================================== */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-10) var(--spacing-4);
+  color: var(--gray-500);
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-4);
+  color: var(--gray-300);
+}
+
+.empty-state-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-700);
+  margin-bottom: var(--spacing-2);
+}
+
+.empty-state-text {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+/* ========================================
+   TOUCH FEEDBACK
+   ======================================== */
+@media (hover: none) {
+  .action-card:hover {
+    background-color: var(--white);
+  }
+
+  .btn:hover:not(:disabled) {
+    filter: none;
+  }
+}
+
+/* Safe area padding for iPhone X+ */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .admin-page {
+    padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav {
+    height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+  }
+}
