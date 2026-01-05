@@ -51,6 +51,24 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 700px;
+  table-layout: fixed;
+}
+
+/* Wide container for timetable - reduced white space */
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+}
+
+@media (min-width: 1200px) {
+  .container-wide {
+    padding-left: var(--spacing-8);
+    padding-right: var(--spacing-8);
+  }
 }
 
 .timetable th,
@@ -207,4 +225,121 @@
    ======================================== */
 .slot-cell.available:active {
   transform: scale(0.95);
+}
+
+/* ========================================
+   ABOUT & CONTACT SECTIONS
+   ======================================== */
+.section {
+  padding: var(--spacing-12) 0;
+  border-top: 1px solid var(--gray-200);
+  margin-top: var(--spacing-8);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.section-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--gray-500);
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-card {
+  text-align: center;
+  padding: var(--spacing-6);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+}
+
+.about-card-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-4);
+  color: var(--primary);
+}
+
+.about-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.about-card-text {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  font-size: var(--font-size-base);
+  color: var(--gray-700);
+}
+
+.contact-item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--spacing-6) 0;
+  border-top: 1px solid var(--gray-200);
+  margin-top: var(--spacing-8);
+  color: var(--gray-500);
+  font-size: var(--font-size-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
 }
