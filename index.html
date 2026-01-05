@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Booking - Book Your Time Slot</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563EB'%3E%3Cpath d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+  <!-- ========================================
+       DESKTOP HEADER
+       ======================================== -->
+  <header class="header desktop-only">
+    <div class="header-logo">
+      <div class="header-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <span class="header-logo-text">Schedule Booking</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#" class="header-nav-link active">Home</a>
+      <a href="#timetable" class="header-nav-link">Schedule</a>
+      <a href="#" class="header-nav-link">About</a>
+      <a href="#" class="header-nav-link">Contact</a>
+      <a href="admin/index.html" class="btn btn-outline btn-sm">Admin</a>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       MOBILE HEADER
+       ======================================== -->
+  <header class="header-mobile mobile-only">
+    <div class="header-logo">
+      <div class="header-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <span class="header-logo-text">Schedule Booking</span>
+    </div>
+  </header>
+
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1 class="hero-title">Book Your Time Slot</h1>
+        <p class="hero-subtitle">Select an available slot from the schedule below to make a booking</p>
+      </section>
+
+      <!-- ========================================
+           DESKTOP TIMETABLE (Weekly Grid)
+           ======================================== -->
+      <section id="timetable" class="timetable-section desktop-only">
+        <div class="timetable-wrapper">
+          <table class="timetable" id="timetable-desktop">
+            <thead>
+              <tr>
+                <th class="time-header">Time</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </tr>
+            </thead>
+            <tbody id="timetable-body">
+              <!-- Rows will be rendered by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        <div class="timetable-legend">
+          <div class="legend-item">
+            <span class="legend-dot legend-available"></span>
+            <span>Available - Click to book</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot legend-booked"></span>
+            <span>Booked</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           MOBILE TIMETABLE (Day Tabs + Vertical Slots)
+           ======================================== -->
+      <section class="timetable-section-mobile mobile-only">
+        <!-- Day Tabs -->
+        <div class="day-tabs-wrapper">
+          <div class="day-tabs" id="day-tabs">
+            <!-- Day tabs will be rendered by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Slot Cards -->
+        <div class="slot-cards" id="slot-cards">
+          <!-- Slot cards will be rendered by JavaScript -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========================================
+       MOBILE BOTTOM NAVIGATION
+       ======================================== -->
+  <nav class="bottom-nav mobile-only">
+    <a href="#" class="bottom-nav-item active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#timetable" class="bottom-nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+      <span>Schedule</span>
+    </a>
+  </nav>
+
+  <!-- ========================================
+       BOOKING MODAL
+       ======================================== -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Book This Slot</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="booking-slot-info">
+          <span id="booking-day">Monday</span>, <span id="booking-time">8:00 AM - 10:00 AM</span>
+        </div>
+        <form id="booking-form">
+          <input type="hidden" id="booking-day-id" value="">
+          <input type="hidden" id="booking-slot-id" value="">
+
+          <div class="form-group">
+            <label class="form-label" for="booking-name">Name</label>
+            <input
+              type="text"
+              class="form-input"
+              id="booking-name"
+              placeholder="Enter your name"
+              required
+            >
+            <span class="form-error" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="booking-phone">Phone Number</label>
+            <input
+              type="tel"
+              class="form-input"
+              id="booking-phone"
+              placeholder="e.g., 012-345-6789"
+              required
+            >
+            <span class="form-error" id="phone-error"></span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="modal-submit">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>
