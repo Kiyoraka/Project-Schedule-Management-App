@@ -44,19 +44,30 @@
        MAIN CONTENT
        ======================================== -->
   <main class="main-content">
-    <!-- Home / Welcome Section -->
-    <div class="container">
-      <section id="home" class="hero">
+    <!-- HOME PAGE -->
+    <section id="home" class="page-section">
+      <div class="hero">
         <div class="hero-badge">Driving School</div>
         <h1 class="hero-title">Book Your Driving Lesson Today</h1>
         <p class="hero-subtitle">Start your journey to becoming a confident driver. Choose your preferred time slot and learn with our experienced instructors.</p>
         <a href="#timetable" class="btn btn-primary hero-cta">View Available Slots</a>
-      </section>
-    </div>
+      </div>
+      <a href="#timetable" class="scroll-indicator">
+        <span>Scroll Down</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </a>
+    </section>
 
-    <!-- Weekly Timetable Grid - Wide Container -->
-    <div class="container-wide">
-      <section id="timetable" class="timetable-section">
+    <!-- SCHEDULE PAGE -->
+    <section id="timetable" class="page-section">
+      <div class="container-wide">
+        <div class="section-header">
+          <h2 class="section-title">Class Schedule</h2>
+          <p class="section-subtitle">Select an available slot to book your driving lesson</p>
+        </div>
+        <div class="timetable-section">
         <div class="timetable-wrapper">
           <table class="timetable" id="timetable-desktop">
             <thead>
@@ -86,12 +97,13 @@
             <span>Booked</span>
           </div>
         </div>
-      </section>
-    </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- About Section -->
-    <div class="container">
-      <section id="about" class="section">
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page-section">
+      <div class="container">
         <div class="section-header">
           <h2 class="section-title">Why Choose Us</h2>
           <p class="section-subtitle">Your trusted partner in learning to drive</p>
@@ -125,10 +137,12 @@
             <p class="about-card-text">Modern dual-control vehicles and comprehensive insurance ensure a safe learning environment.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section">
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page-section">
+      <div class="container">
         <div class="section-header">
           <h2 class="section-title">Contact Us</h2>
           <p class="section-subtitle">Have questions? We're here to help</p>
@@ -162,15 +176,12 @@
             </div>
           </div>
         </div>
-      </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 Schedule Booking - Driving School. All rights reserved.</p>
+        <!-- Footer inside contact section -->
+        <div class="footer-inline">
+          <p>&copy; 2026 Schedule Booking - Driving School. All rights reserved.</p>
+        </div>
       </div>
-    </footer>
+    </section>
   </main>
 
   <!-- ========================================
