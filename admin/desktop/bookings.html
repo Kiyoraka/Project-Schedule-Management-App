@@ -154,5 +154,24 @@
   <script src="../../js/storage.js"></script>
   <script src="../../js/utils.js"></script>
   <script src="../../js/admin-desktop.js"></script>
+
+  <!-- Viewport Switch Detection -->
+  <script>
+    (function() {
+      let resizeTimer;
+      const MOBILE_BREAKPOINT = 768;
+
+      function checkViewport() {
+        if (window.innerWidth < MOBILE_BREAKPOINT) {
+          window.location.replace('../mobile/bookings.html');
+        }
+      }
+
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkViewport, 250);
+      });
+    })();
+  </script>
 </body>
 </html>

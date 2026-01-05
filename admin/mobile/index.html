@@ -100,5 +100,24 @@
       });
     });
   </script>
+
+  <!-- Viewport Switch Detection -->
+  <script>
+    (function() {
+      let resizeTimer;
+      const DESKTOP_BREAKPOINT = 768;
+
+      function checkViewport() {
+        if (window.innerWidth >= DESKTOP_BREAKPOINT) {
+          window.location.replace('../desktop/index.html');
+        }
+      }
+
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkViewport, 250);
+      });
+    })();
+  </script>
 </body>
 </html>
