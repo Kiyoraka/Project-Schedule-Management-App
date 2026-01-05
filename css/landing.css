@@ -1,0 +1,433 @@
+/**
+ * Landing Page CSS - Desktop Grid + Mobile Day Tabs
+ * Schedule Management App
+ */
+
+/* ========================================
+   MAIN LAYOUT
+   ======================================== */
+.main-content {
+  padding-top: var(--header-height);
+  padding-bottom: var(--spacing-8);
+}
+
+/* Mobile: Account for bottom nav */
+@media (max-width: 767px) {
+  .main-content {
+    padding-top: var(--spacing-4);
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-4));
+  }
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  text-align: center;
+  padding: var(--spacing-8) 0 var(--spacing-6);
+}
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--gray-500);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--spacing-6) 0 var(--spacing-4);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ========================================
+   DESKTOP TIMETABLE (Weekly Grid)
+   ======================================== */
+.timetable-section {
+  margin-top: var(--spacing-4);
+}
+
+.timetable-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  background-color: var(--white);
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.timetable th,
+.timetable td {
+  padding: var(--spacing-3);
+  text-align: center;
+  border: 1px solid var(--gray-200);
+}
+
+.timetable th {
+  background-color: var(--gray-50);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+  color: var(--gray-700);
+}
+
+.timetable .time-header {
+  width: 120px;
+  text-align: left;
+  padding-left: var(--spacing-4);
+}
+
+.timetable td.time-cell {
+  background-color: var(--gray-50);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  color: var(--gray-600);
+  text-align: left;
+  padding-left: var(--spacing-4);
+}
+
+/* ========================================
+   SLOT CELLS (Desktop)
+   ======================================== */
+.slot-cell {
+  min-width: 80px;
+  height: 60px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+/* Available Slot */
+.slot-cell.available {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.slot-cell.available:hover {
+  background-color: var(--success);
+  color: var(--white);
+}
+
+.slot-cell.available::after {
+  content: 'Available';
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-medium);
+}
+
+.slot-cell.available:hover::after {
+  content: 'Click to Book';
+}
+
+/* Booked Slot */
+.slot-cell.booked {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  cursor: not-allowed;
+}
+
+.slot-cell.booked .booker-name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-semibold);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70px;
+  margin: 0 auto;
+}
+
+/* Pending Slot (optional indicator) */
+.slot-cell.pending {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  cursor: not-allowed;
+}
+
+/* ========================================
+   TIMETABLE LEGEND
+   ======================================== */
+.timetable-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-4);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+}
+
+.legend-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.legend-dot.legend-available {
+  background-color: var(--success-light);
+  border: 2px solid var(--success);
+}
+
+.legend-dot.legend-booked {
+  background-color: var(--danger-light);
+  border: 2px solid var(--danger);
+}
+
+/* ========================================
+   MOBILE TIMETABLE (Day Tabs + Slots)
+   ======================================== */
+.timetable-section-mobile {
+  margin-top: var(--spacing-4);
+}
+
+/* Day Tabs */
+.day-tabs-wrapper {
+  overflow-x: auto;
+  margin-bottom: var(--spacing-4);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.day-tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.day-tabs {
+  display: flex;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) 0;
+  min-width: max-content;
+}
+
+.day-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 60px;
+}
+
+.day-tab:hover {
+  border-color: var(--primary);
+}
+
+.day-tab.active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.day-tab-short {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+}
+
+.day-tab-date {
+  font-size: var(--font-size-xs);
+  color: var(--gray-400);
+  margin-top: var(--spacing-1);
+}
+
+.day-tab.active .day-tab-date {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================================
+   SLOT CARDS (Mobile)
+   ======================================== */
+.slot-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.slot-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slot-card:hover {
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.slot-card-time {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-medium);
+  color: var(--gray-900);
+}
+
+.slot-card-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* Available Slot Card */
+.slot-card.available {
+  border-left: 4px solid var(--success);
+}
+
+.slot-card.available .slot-card-badge {
+  background-color: var(--success-light);
+  color: var(--success);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-medium);
+}
+
+.slot-card.available:hover {
+  border-color: var(--success);
+  background-color: var(--success-light);
+}
+
+/* Booked Slot Card */
+.slot-card.booked {
+  border-left: 4px solid var(--danger);
+  cursor: not-allowed;
+}
+
+.slot-card.booked:hover {
+  border-color: var(--gray-200);
+  box-shadow: none;
+}
+
+.slot-card.booked .slot-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-card.booked .slot-card-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-semibold);
+  color: var(--danger);
+}
+
+.slot-card.booked .slot-card-badge {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-medium);
+}
+
+/* ========================================
+   BOOKING MODAL CUSTOMIZATION
+   ======================================== */
+.booking-slot-info {
+  text-align: center;
+  padding: var(--spacing-3);
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-medium);
+  color: var(--primary-dark);
+}
+
+/* Form validation states */
+#booking-form .form-input.error {
+  border-color: var(--danger);
+}
+
+#booking-form .form-error {
+  display: none;
+  font-size: var(--font-size-xs);
+  color: var(--danger);
+  margin-top: var(--spacing-1);
+}
+
+#booking-form .form-error.visible {
+  display: block;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (min-width: 768px) {
+  .timetable-section-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .timetable-section {
+    display: none;
+  }
+
+  .container {
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+  }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.slot-card.available:active {
+  transform: scale(0.98);
+}
+
+.slot-cell.available:active {
+  transform: scale(0.95);
+}
+
+/* ========================================
+   LOADING STATE (Optional)
+   ======================================== */
+.timetable-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: var(--gray-400);
+}
+
+.timetable-loading .spinner {
+  margin-right: var(--spacing-3);
+}
