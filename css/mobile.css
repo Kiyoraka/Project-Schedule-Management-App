@@ -23,7 +23,7 @@ body {
   border-bottom: 1px solid var(--gray-200);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 var(--spacing-4);
   z-index: var(--z-dropdown);
 }
@@ -51,6 +51,22 @@ body {
   color: var(--gray-900);
 }
 
+.mobile-header-admin {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-header-admin:active {
+  background-color: var(--gray-100);
+  color: var(--primary);
+}
+
 /* ========================================
    MAIN CONTENT
    ======================================== */
@@ -63,22 +79,69 @@ body {
 }
 
 /* ========================================
-   HERO SECTION
+   PAGE SECTIONS
    ======================================== */
-.mobile-hero {
+.mobile-page-section {
+  padding-bottom: var(--spacing-8);
   margin-bottom: var(--spacing-4);
 }
 
-.mobile-hero-title {
+.mobile-page-section:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-section-header {
+  margin-bottom: var(--spacing-4);
+}
+
+.mobile-section-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-bold);
   color: var(--gray-900);
   margin-bottom: var(--spacing-1);
 }
 
+.mobile-section-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.mobile-hero {
+  text-align: center;
+  padding: var(--spacing-8) 0;
+}
+
+.mobile-hero-badge {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  background-color: var(--primary-light);
+  color: var(--primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-3);
+}
+
+.mobile-hero-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+  line-height: 1.2;
+}
+
 .mobile-hero-subtitle {
   font-size: var(--font-size-sm);
   color: var(--gray-500);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.5;
+}
+
+.mobile-hero-cta {
+  padding: var(--spacing-3) var(--spacing-6);
 }
 
 /* ========================================
@@ -309,6 +372,104 @@ body {
 #booking-form .form-input {
   padding: var(--spacing-4);
   font-size: 16px; /* Prevent iOS zoom */
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.mobile-about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.mobile-about-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+}
+
+.mobile-about-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.mobile-about-content {
+  flex: 1;
+}
+
+.mobile-about-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-1);
+}
+
+.mobile-about-text {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+.mobile-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.mobile-contact-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  color: var(--gray-700);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.mobile-contact-card:active {
+  background-color: var(--gray-50);
+}
+
+.mobile-contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.mobile-footer {
+  text-align: center;
+  padding-top: var(--spacing-8);
+  margin-top: var(--spacing-4);
+  border-top: 1px solid var(--gray-200);
+  color: var(--gray-400);
+  font-size: var(--font-size-xs);
 }
 
 /* ========================================
